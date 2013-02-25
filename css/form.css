@@ -1,7 +1,0 @@
-#dbform {
-	color:#000000;
-}
-#validationMessage, #dbform-recaptchavalidation {
-	color:red;
-	display:none;
-}
