@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Database Form</title>
+		<script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+		<script type="text/javascript" src="http://www.google.com/recaptcha/api/js/recaptcha_ajax.js"></script>
+		<script type="text/javascript" src="js/json2.min.js"></script>
+		<script type="text/javascript" src="js/form.js"></script>
+		<link rel="stylesheet" href="css/form.css" />
+	</head>
+	<body>
+		<div id="dbform">
+			<div id="validationMessage">
+				Please provide a response to the required fields...
+			</div>
+			<table id="dbform-fields">
+				<tr class="formField required">
+					<td class="formLabel">
+						Textbox:
+					</td>
+					<td class="formInput">
+						<input name="Textbox" type="text" />
+					</td>
+				</tr><!-- .formField -->
+				<tr class="formField">
+					<td class="formLabel">
+						Checkbox:
+					</td>
+					<td class="formInput">
+						<input name="Checkbox" type="checkbox" />
+					</td>
+				</tr><!-- .formField -->
+				<tr class="formField">
+					<td class="formLabel">
+						Multiline:
+					</td>
+					<td class="formInput">
+						<textarea name="Multiline"></textarea>
+					</td>
+				</tr><!-- .formField -->
+				<tr class="formField required">
+					<td class="formLabel">
+						Option One:<br />
+						Option Two:<br />
+						Option Three:<br />
+					</td>
+					<td class="formInput">
+						<input name="Radio" value="Option One" type="radio" /><br />
+						<input name="Radio" value="Option Two" type="radio" /><br />
+						<input name="Radio" value="Option Three" type="radio" /><br />
+					</td>
+				</tr><!-- .formField -->
+				<tr class="formField">
+					<td class="formLabel">
+						Dropdown:
+					</td>
+					<td class="formInput">
+						<select name="Dropdown">
+							<option value="First Option">First Option</option>
+							<option value="Second Option">Second Option</option>
+							<option value="Third Option">Third Option</option>
+						</select>
+					</td>
+				</tr><!-- .formField -->
+			</table>
+			<div id="dbform-recaptchavalidation">
+				You responded incorrectly to the field below. Please try again.
+			</div>
+			<div id="dbform-recaptcha">
+			</div>
+			<input type="button" value="Submit" id="dbform-submit" />
+		</div><!-- #dbform -->
+	</body>
+</html>
