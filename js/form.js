@@ -6,7 +6,7 @@ DBForm.recaptchaPublicKey = "YOUR RECAPTCHA PUBLIC KEY HERE";
 
 DBForm.GetSubmittedFields = function() {
 	var radioGroups = new Object();
-	$("#dbform input[type='radio']").each(function() {
+	$("#dbform-fields input[type='radio']").each(function() {
 		if (this.checked) {
 			radioGroups[$(this).attr("name")] = new Object();
 			radioGroups[$(this).attr("name")]["name"] = $(this).attr("name");
@@ -40,6 +40,7 @@ DBForm.GetSubmittedFields = function() {
 }
 
 DBForm.ValidateClient = function() {
+	DBForm.FormFields = new Object();
 	$("#validationMessage").hide();
 	$(".formLabel").css("color","#000000");
 	var valid = true;
@@ -65,8 +66,7 @@ DBForm.ValidateClient = function() {
 }
 
 DBForm.RecaptchaFail = function() {
-	DBForm.SubmittedPeople = new Object();
-	DBForm.MatchedPeople = new Object();
+	DBForm.FormFields = new Object();
 	$(".dbform-validation").hide();
 	Recaptcha.reload();
 	$("#dbform-recaptchavalidation").show();
@@ -75,6 +75,7 @@ DBForm.RecaptchaFail = function() {
 DBForm.SubmitSuccess = function() {
 	alert("Form Submitted Successfully!");
 	//Do more stuff
+	//window.location.href = "success.html";
 }
 
 DBForm.SubmitForm = function() {
