@@ -74,7 +74,6 @@ DBForm.RecaptchaFail = function() {
 
 DBForm.SubmitSuccess = function() {
 	alert("Form Submitted Successfully!");
-	//Do more stuff
 	//window.location.href = window.location.protocol + "//" window.location.hostname + window.location.path.replace(/\/[^\/]*$/,"success.html");
 }
 
